@@ -31,7 +31,7 @@ problema de \enc{localización}{localizacion} minisum ponderado.
 \tabular{ll}{
 Paquete: \tab RcmdrPlugin.orloca\cr
 Tipo: \tab Paquete\cr
-Version: \tab 4.8.1\cr
+Version: \tab 4.8.2\cr
 Fecha: \tab 2021-05-07\cr
 Licencia: \tab GPL (>= 3)\cr
 }

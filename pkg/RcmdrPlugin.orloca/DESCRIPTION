@@ -1,13 +1,13 @@
 Package: RcmdrPlugin.orloca
 Type: Package
 Title: A GUI for Planar Location Problems
-Version: 4.8.1
+Version: 4.8.2
 Date: 2021-05-07
 Author: Manuel Munoz-Marquez <manuel.munoz@uca.es>
 Maintainer: Manuel Munoz-Marquez <manuel.munoz@uca.es>
 Depends: orloca (>= 4.6), orloca.es (>= 4.6)
 Imports: Rcmdr
-Suggests: knitr
+Suggests: knitr, rmarkdown
 VignetteBuilder: knitr
 Description: A GUI for the orloca package is provided as a Rcmdr plug-in. The package deals with continuos planar location problems.
 Language: en, es
