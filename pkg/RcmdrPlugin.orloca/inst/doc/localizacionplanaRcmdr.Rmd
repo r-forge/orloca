@@ -21,7 +21,8 @@ library(RcmdrPlugin.orloca)
 
 # Introducción
 
-En un problema de localización se busca encontrar la ubicación óptima de un servicio, o un conjunto de ellos, de forma que la calidad que dicho servicio presta a un conjunto de puntos de demanda sea, según cierta medida, óptimo. 
+En un problema de localización se busca encontrar la ubicación óptima de un servicio, o un conjunto de ellos, de forma que la calidad que dicho servicio presta a un conjunto de puntos de demanda sea, según cierta medida, óptimo.
+
 Algunos ejemplos de problemas de localización son:
 
 * Encontrar la ubicación óptima del almacen central de una red de distribución de mercancías para que se minimice el costo total de transporte
@@ -196,4 +197,4 @@ Las dos opciones disponibles dentro del menú "Orloca" -> "Ayuda", a saber, "Ayu
 
 # Conclusiones
 
-El paquete presentado permite resolver el problema de localización plana de un único servicio con norma $l_p$ usando un sistema amigable de menús.
+El paquete presentado permite resolver el problema de localización plana contínua de un único servicio con norma $l_p$ usando un sistema amigable de menús.

@@ -1,12 +1,12 @@
 \name{RcmdrPlugin.orloca-package}
-\title{A GUI for Planar Location Problems}
+\title{A GUI for Continuous Planar Location Problems}
 \alias{RcmdrPlugin.orloca-package}
 \alias{RcmdrPlugin.orloca}
 \docType{package}
 \encoding{UTF-8}
 \description{
   RcmdrPlugin.orloca provides a GUI for the orloca package as a Rcmdr
-  plug-in. The package deals with location problems on the plane.
+  plug-in. The package deals with continuos location problems on the plane.
 
   In order to use the full power of the Rcmdr interface, the data for
   location problems are stored as \code{data.frame} objects. These
@@ -17,15 +17,15 @@
 
   The main functions of \code{orloca} packages are available throughout the
   GUI. These functions include: data manipulation, plot of the demand 
-  points set and the objective function, and also the resolution of the location
-  problem.
+  points set and the objective function, and also the resolution of the
+  weighted minsum location problem.
 }
 \details{
 \tabular{ll}{
 Package: \tab RcmdrPlugin.orloca\cr
 Type: \tab Package\cr
-Version: \tab 4.7\cr
-Date: \tab 2018-11-18\cr
+Version: \tab 4.8.1\cr
+Date: \tab 2021-05-07\cr
 License: \tab GPL version 3 or newer\cr
 }
 }

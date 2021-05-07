@@ -20,15 +20,16 @@ library(RcmdrPlugin.orloca)
 ```
 # Introduction
 
-In a location problem, we seek to find the optimal location of a service, or a set of them, so that the quality that the service provides to a set of demand points is, according to a given performance measure, optimal.
+In a location problem, we seek to find an optimal location of a service, or a set of them, so that the quality that the service provides to a set of demand points is, according to a given performance measure, optimal.
+
 Some examples of localization problems are:
 
 * Find the optimal location of the central warehouse of a merchandise distribution network so that the total cost of transport is minimized
-* Find the optimal location of an ambulance that must attend to the patients of a certain region so that the time in treating the farthest patient is minimized
+* Find the optimal location of an ambulance that must assist to the patients of a certain region so that the time in treating the farthest patient is minimized
 
 There are numerous contexts in which location problems arise, due to this, the location theory has been object of great attention in recent years, being able to say that it is a subject of great importance.
 The appearance of new facets of the problem, didn't handle until now, contributes to this. 
-For example, along with the already classic criteria for minimizing costs, new criteria appear the new ones: environmental, social, quality of life, etc.
+For example, along with the already classic criteria for minimizing costs, new criterias appear: environmental, social, quality of life, etc.
 These new aspects of the problem make it an open field of study.
 
 The package presented is devoted to solving the problem of locating a single point in the plane, using as an objective the minimization of the sum of the weighted distances to the demand points.

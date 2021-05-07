@@ -21,14 +21,15 @@ library(RcmdrPlugin.orloca)
 # Introduction
 
 In a location problem, we seek to find the optimal location of a service, or a set of them, so that the quality that the service provides to a set of demand points is, according to a given performance measure, optimal.
+
 Some examples of localization problems are:
 
 * Find the optimal location of the central warehouse of a merchandise distribution network so that the total cost of transport is minimized
-* Find the optimal location of an ambulance that must attend to the patients of a certain region so that the time in treating the farthest patient is minimized
+* Find the optimal location of an ambulance that must assist to the patients of a certain region so that the time to reach the farthest patient is minimized
 
 There are numerous contexts in which location problems arise, due to this, the location theory has been object of great attention in recent years, being able to say that it is a subject of great importance.
 The appearance of new facets of the problem, didn't handle until now, contributes to this. 
-For example, along with the already classic criteria for minimizing costs, new criteria appear the new ones: environmental, social, quality of life, etc.
+For example, along with the already classic criteria for minimizing costs, new criterias appear: environmental, social, quality of life, etc.
 These new aspects of the problem make it an open field of study.
 
 The package presented is devoted to solving the problem of locating a single point in the plane, using as an objective the minimization of the sum of the weighted distances to the demand points.
@@ -48,9 +49,9 @@ The main entry for this menu is __Orloca__, and the options in this menu are:
 
 # The class of objects loca.p
 
-In a planar location problem the set of demand points is given by the coordinates of said points.
-Optionally, a set of weights can be assigned to said points, which gives more importance to some points than to others, since the objective considered is to minimize the weighted sum of the distances between the service point and said requesting assembly.
-For example, if the location of a regional hospital is sought, the demand points can be the localities to which the hospital must attend and the weights of the population of each locality.
+In a planar location problem the set of demand points is given by the coordinates the demand points.
+Optionally, a set of weights can be assigned to the points, which gives more importance to some points than to others, since the objective considered is to minimize the weighted sum of the distances between the service point and demand ones.
+For example, if the location of a regional hospital is sought, the demand points can be the localities to which the hospital must assist and the weights of the population of each locality.
 
 For the resolution of these problems, a class of objects designated `loca.p` has been defined, so that a `loca.p` object stores the coordinates of the demand points and the weights of each of the points.
 Each object `loca.p` has three slots, `x` and `y` that store the coordinates and `w` that stores the weights.
@@ -61,7 +62,7 @@ The rest of this section will explain how to do basic operations with `loca.p` o
 ## Creating class objects loca.p
 
 Consider a localization problem in which the set of demand points is $(0,0)$, $(4,0)$ and $(2,2)$.
-To create a `loca.p` object that represents that set, the options "Orloca" -> "New loca.p" are selected in the menu, obtaining the dialog:
+To create a `loca.p` object that represents that set, select "Orloca" -> "New loca.p" in the menu, obtaining the dialog:
 
 ![Dialog "New loca.p"](img/dialog.new.loca.p.png)
 
@@ -101,7 +102,7 @@ summary(loca1)
 # Weighted average distance
 
 Given a `loca.p` object, we can evaluate the weighted average distance from a given point.
-Likewise, the gradient of said function can be evaluated and the problem of minimizing said objective can be solved.
+Likewise, the gradient of minsum function can be evaluated and the problem of minimizing the weighted distance can be solved.
 
 ## Evaluation
 
@@ -110,7 +111,7 @@ Given a point, for example: $(3, 1)$ to evaluate the weighted average distance t
 
 ![Dialog "Evaluation of the Objective Function of the weighted sum Location Problem"](img/dialog.distsum.png)
 
-By entering the values shown you get:
+By entering the values shown you get:
 ```{r}
 distsum(as(loca1, "loca.p"), x = 3, y = 1) # Weighted sum of the distances
 distsumgra(as(loca1, "loca.p"), x = 3, y = 1) # Gradient of the weighted sum function of the distances
@@ -136,8 +137,8 @@ Where it is shown that the solution is the point $(2, 1.15)$, the function is ev
 
 # Plotting
 
-Both the objects `loca.p` and the objective function can be represented in a graph.
-For the objective function, a representation based on level curves and another one on a 3D graph is provided.
+Both, objects `loca.p` and the objective function, can be represented in a graph.
+For the objective function, a representation based on level curves and another one as a 3D graph is provided.
 
 ## Plotting an object `loca.p`
 
@@ -172,7 +173,7 @@ A three-dimensional representation can be made by selecting the options "Orloca"
 persp(as(loca1, "loca.p"), main = "3D graph of the objective function min-sum for loca1")
 ```
 
-# Use of other norm
+# Use of other norms
 
 The norm that is used by default is the Euclidean norm or $l_2$ norm.
 Through the options "Orloca" -> "Options" -> "Show/Set norm" you can display the norm in use or choose a new norm within the $l_p$ family of norms.
@@ -181,8 +182,8 @@ When choosing those options from the menu, we get the dialog:
 
 ![Dialog "Show/Set norm"](img/dialog.norm.png)
 
-In this dialog you can specify a new value for $p$ greater than or equal to 1, and that otherwise, $l_p$ would not be a norm.
-All calculations and graphs will be made using this norm until a new value is specified or the norm $l_2$ is chosen again.
+In that dialog you can specify a new value for $p$ greater than or equal to 1, otherwise, $l_p$ would not be a norm.
+All calculations and graphs will be made using this norm until a new value is set or the norm $l_2$ is chosen again.
 
 The new contour graph is:
 
@@ -196,4 +197,4 @@ The two options available within the menu "Orloca" -> "Help", namely "Help on or
 
 # Conclusions
 
-The presented package allows solving the problem of planar location of a single service with norm $l_p$ using an user friendly menus.
+The presented package allows solving the problem of continuous planar location of a single service with norm $l_p$ using an user friendly menus.

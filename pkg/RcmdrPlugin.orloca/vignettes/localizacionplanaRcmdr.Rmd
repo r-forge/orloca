@@ -21,16 +21,15 @@ library(RcmdrPlugin.orloca)
 
 # Introducción
 
-En un problema de localización se busca encontrar la ubicación óptima de un servicio, o un conjunto de ellos, de forma que la calidad que dicho servicio presta a un conjunto de puntos de demanda sea, según cierta medida, óptimo. 
+En un problema de localización se busca encontrar la ubicación óptima de un servicio, o un conjunto de ellos, de forma que la calidad que dicho servicio presta a un conjunto de puntos de demanda sea, según cierta medida, óptima. 
+
 Algunos ejemplos de problemas de localización son:
 
 * Encontrar la ubicación óptima del almacen central de una red de distribución de mercancías para que se minimice el costo total de transporte
 * Encontrar la ubicación óptima de una ambulancia que debe atender a los pacientes de cierta región para que se minimice el tiempo en atender al paciente más lejano
 
-Son numerosos los contextos en los que se plantean problemas de localización, debido a ello la teoría de localización ha sido objeto de gran atención en los últimos años, pudiendo decirse que es un tema de gran 
-actualidad y vigencia. 
-A ello contribuye la aparición de facetas del problema hasta ahora no 
-estudiadas. 
+Son numerosos los contextos en los que se plantean problemas de localización, debido a ello la teoría de localización ha sido objeto de gran atención en los últimos años, pudiendo decirse que es un tema de gran actualidad y vigencia. 
+A ello contribuye la aparición de facetas del problema hasta ahora no estudiadas. 
 Por ejemplo, junto a los ya clásicos criterios de minimización de costos, aparecen nuevos criterios: ambientales, sociales, calidad de vida, etc. 
 Estas nuevas vertientes del problema hacen que sea un campo abierto de estudio. 
 
