@@ -1,3 +1,6 @@
+Version 5.1
+2023-05-15
+ * Package update with minor changes
 Version 4.10
 2020-09-26
  * Corrected bug in contour plot that avoid null range plots

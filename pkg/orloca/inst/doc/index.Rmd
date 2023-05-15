@@ -1,0 +1,28 @@
+---
+title: "Index of adea package vignettes"
+author: 
+ - Manuel Munoz-Marquez^[Universidad de Cádiz, manuel.munoz@uca.es]
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Index of orloca package vignettes}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.width = 6,
+  fig.height = 4
+)
+```
+
+# Index
+
+* [Planar Location with orloca](planarlocation.html)
+* [Localización plana con orloca](localizacionplana.html)
+
+
+

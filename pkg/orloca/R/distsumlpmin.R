@@ -92,7 +92,7 @@ distsumlpminWeiszfeld.loca.p <- function (o, x=0, y=0, p=2, max.iter=100, eps=1.
    # Check smooth value
    if (!identical(csmooth >= 0 && csmooth < 1, TRUE))
      {
-       warning(paste(gettext("Value for smooth parameter non valid", domain = "R-orloca"), smooth, gettext("Reseting to its default value", domain = "R-orloca")))
+       warning(paste(gettext("Value for smooth parameter non valid:", domain = "R-orloca"), smooth, gettext("Reseting to its default value.", domain = "R-orloca")))
        csmooth <- .5
      }
    eps2 <- eps^2

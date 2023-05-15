@@ -29,13 +29,27 @@
 #' @return The function plots the required graphics.
 #' @export
 plot.loca.p <- function(x, xlab="", ylab="", main=paste(gettext("Plot of loca.p", domain = "R-orloca"), ifelse(x@label == "", "", paste0(": \"", x@label, "\""))), img=NULL, xlim=c(min(xleft, min(x@x)), max(xright, max(x@x))), ylim=c(min(ybottom, min(x@y)), max(ytop, max(x@y))), xleft=min(x@x), ybottom=min(x@y), xright=max(x@x), ytop=max(x@y), ...)
-   {
-   plot(x@x, x@y, xlab=xlab, ylab=ylab, main=main, xlim=xlim, ylim=ylim, ...)
-   if (!is.null(img)) {
-     if (is.raster(.img <- img) || is.raster(.img <- as.raster(img))) {
-       rasterImage(.img, xleft, ybottom, xright, ytop)
-       }
-     else warning(gettext("The given img object is not a raster image and cannot be coerce to it.", domain = "R-orloca"))
-     }
-   points(x@x, x@y)
-   }
+{
+    ## Compute graphical limits to avoid degenerated cases and wrong argument values
+    .xmin = min(xlim[1], xlim[2])
+    .xmax = max(xlim[1], xlim[2])
+    deltax = max(.xmax - .xmin, .1)
+    centerx = (.xmin + .xmax)/2
+    .xmin = centerx - deltax/2
+    .xmax = centerx + deltax/2
+    .ymin = min(ylim[1], ylim[2])
+    .ymax = max(ylim[1], ylim[2])
+    deltay = max(.ymax - .ymin, .1)
+    centery = (.ymin + .ymax)/2
+    .ymin = centery - deltay/2
+    .ymax = centery + deltay/2
+    ## Plot it
+    plot(x@x, x@y, xlab=xlab, ylab=ylab, main=main, xlim=c(.xmin, .xmax), ylim=c(.ymin, .ymax), ...)
+    if (!is.null(img)) {
+        if (is.raster(.img <- img) || is.raster(.img <- as.raster(img))) {
+            rasterImage(.img, xleft, ybottom, xright, ytop)
+        }
+        else warning(gettext("The given img object is not a raster image and cannot be coerce to it.", domain = "R-orloca"))
+    }
+    points(x@x, x@y)
+}

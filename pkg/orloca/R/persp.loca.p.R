@@ -15,6 +15,7 @@
 #' @param ymin The minimum value for y axis.
 #' @param ymax The maximum value for y axis.
 #' @param n The number of divisions for grid.
+#' @param ticktype parameter to pass to low level function persp
 #' @param \ldots Other options.
 #' @return A plot a 3D plot or min-sum function.
 #' @seealso See also \code{\link{orloca-package}}, \code{\link{plot.loca.p}} and \code{\link{loca.p}}.
@@ -26,25 +27,40 @@
 #' persp(loca)
 #'
 #' @export
-persp.loca.p <- function(x, lp=numeric(0), xmin=min(x@x), xmax=max(x@x), ymin=min(x@y), ymax=max(x@y), n=10, ...)
-   {
-   .x<-seq(xmin, xmax, length.out=n)
-   .y<-seq(ymin, ymax, length.out=n)
-   .z<-matrix(1, nrow=n, ncol=n, byrow=TRUE)
-   if (length(lp) == 0)
-     {
-       for(i in 1:n)
-         for(j in 1:n)
-           .z[i,j] <- distsum(x, .x[i], .y[j])
-     }
-   else if (lp >= 1)
-     {
-       for(i in 1:n)
-         for(j in 1:n)
-           .z[i,j] <- distsumlp(x, .x[i], .y[j], p=lp)
+persp.loca.p <- function(x, lp=numeric(0), xmin=min(x@x), xmax=max(x@x), ymin=min(x@y), ymax=max(x@y), n=10, ticktype = 'detailed', ...)
+{
+    ## Compute graphical limits to avoid degenerated cases and wrong argument values
+    .xmin = min(xmin, xmax)
+    .xmax = max(xmin, xmax)
+    deltax = max(.xmax - .xmin, .1)
+    centerx = (.xmin + .xmax)/2
+    .xmin = centerx - deltax/2
+    .xmax = centerx + deltax/2
+    .ymin = min(ymin, ymax)
+    .ymax = max(ymin, ymax)
+    deltay = max(.ymax - .ymin, .1)
+    centery = (.ymin + .ymax)/2
+    .ymin = centery - deltay/2
+    .ymax = centery + deltay/2
+    ## Build grid
+    .x<-seq(.xmin, .xmax, length.out=n)
+    .y<-seq(.ymin, .ymax, length.out=n)
+    .z<-matrix(1, nrow=n, ncol=n, byrow=TRUE)
+    ## Compute values
+    if (length(lp) == 0)
+    {
+        for(i in 1:n)
+            for(j in 1:n)
+                .z[i,j] <- distsum(x, .x[i], .y[j])
     }
-   else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp", domain = "R-orloca")))
-   persp(.x, .y, .z, ...)
-   invisible(1)
-   }
+    else if (lp >= 1)
+    {
+        for(i in 1:n)
+            for(j in 1:n)
+                .z[i,j] <- distsumlp(x, .x[i], .y[j], p=lp)
+    }
+    else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp", domain = "R-orloca")))
+    persp(.x, .y, .z, ticktype = ticktype, ...)
+    invisible(1)
+}
 

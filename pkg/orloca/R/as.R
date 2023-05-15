@@ -11,7 +11,7 @@
 #' The \code{matrix} to convert into \code{loca.p} must have at least two columns.
 #' The first column will be consider as the x coordinates, the second as the y coordinates, and the third (if given) as the values of w.
 #'
-#' The \code{data.frame} to convert into \code{loca.p} must have at least an \code{x} column for x coordinates, and an \code{y} column for y coordinates. Optionally, it can have \code{w} column, as the values of w.
+#' The \code{data.frame} to convert into \code{loca.p} must have at least an \code{x} column for x coordinates, and an \code{y} column for y coordinates. Optionally, it can have \code{w} column, as the values of weights, \code{w}.
 #'
 #' @return If the arguments have valid values, it returns a new object of the new class.
 #' @keywords classes methods

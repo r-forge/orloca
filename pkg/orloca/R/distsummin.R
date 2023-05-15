@@ -58,7 +58,7 @@ function (o, x=0, y=0, lp=numeric(0), max.iter=100000, eps=1.e-3, verbose=FALSE,
 
 warning.max.iter <- function(max.iter)
   {
-    warning(paste(gettext("distsummin: Maximun number of iteration reached", domain = "R-orloca"), " (max.iter = ", max.iter, ")\n", gettext("The solution may be non-optimal.\nPerhaps, you could try increasing max.iter value.", domain = "R-orloca"), sep=""), call. = F)
+    warning(paste0(gettext("distsummin: Maximun number of iteration reached"), " (", "max.iter = ", max.iter, ")\n", gettext("The solution may be non-optimal.\nPerhaps, you could try increasing max.iter value.")), call. = F)
   }
 
 #' @rdname zsummin

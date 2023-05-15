@@ -12,7 +12,7 @@
 #' rloca.p(10, xmin=-2, xmax=2, ymin=-2, ymax=2)
 #' # Five groups
 #' rloca.p(48, groups=5)
-#' # Three unequal groups
+#' # Three unequal size groups
 #' rloca.p(1, groups=c(10, 7, 2))
 #' @seealso See also \code{\link{orloca-package}} and \code{loca.p}.
 #' @details
@@ -42,8 +42,7 @@
 #' @export
 rloca.p <- function (n, xmin=0, xmax=1, ymin=0, ymax=1, wmin=1, wmax=1, label = '', groups=0, xgmin=xmin, xgmax=xmax, ygmin=ymin, ygmax=ymax)
 {
-    if (!is.numeric(groups)) stop(paste(gettext("Parameter groups must be numeric", domain = "R-orloca")))
-    if (identical(groups, 0))
+   if (identical(groups, 0))
     {
         x <- runif(n, xmin, xmax)
         y <- runif(n, ymin, ymax)
