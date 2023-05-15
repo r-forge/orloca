@@ -12,6 +12,7 @@
   ymin = min(x@y),
   ymax = max(x@y),
   n = 10,
+  ticktype = "detailed",
   ...
 )
 }
@@ -29,6 +30,8 @@
 \item{ymax}{The maximum value for y axis.}
 
 \item{n}{The number of divisions for grid.}
+
+\item{ticktype}{parameter to pass to low level function persp}
 
 \item{\ldots}{Other options.}
 }

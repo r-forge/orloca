@@ -2,13 +2,12 @@ Package: orloca
 Type: Package
 Depends: methods, png, ucminf
 Imports: grDevices, graphics, knitr, rmarkdown, stats
-Suggests:
-    testthat (>= 3.0.0)
+Suggests: orloca.es, testthat (>= 3.0.0)
 ByteCompile: true
 VignetteBuilder: knitr
 Title: Operations Research LOCational Analysis Models
-Version: 5.1
-Date: 2023-05-15
+Version: 5.2
+Date: 2023-05-16
 Encoding: UTF-8
 Author: Manuel Munoz-Marquez <manuel.munoz@uca.es>
 Maintainer: Manuel Munoz-Marquez <manuel.munoz@uca.es>

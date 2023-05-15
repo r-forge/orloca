@@ -1,5 +1,5 @@
 package := orloca
-version := 5.1
+version := 5.2
 R := $(wildcard R/*.R)
 Rmd := $(wildcard vignettes/*.Rmd)
 test_FILES := $(wildcard tests/testthat/*.R)

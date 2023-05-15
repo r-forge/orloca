@@ -71,7 +71,7 @@ rloca.p(5)
 rloca.p(10, xmin=-2, xmax=2, ymin=-2, ymax=2)
 # Five groups
 rloca.p(48, groups=5)
-# Three unequal groups
+# Three unequal size groups
 rloca.p(1, groups=c(10, 7, 2))
 }
 \seealso{
