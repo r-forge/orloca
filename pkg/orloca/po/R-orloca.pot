@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: orloca 5.2\n"
-"POT-Creation-Date: 2023-05-15 23:24\n"
+"Project-Id-Version: orloca 5.3\n"
+"POT-Creation-Date: 2023-05-16 11:37\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -10,7 +10,10 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "The second dimension of matrix must be 2 or 3."
+msgid "The data.frame to convert must have 2 or 3 columns."
+msgstr ""
+
+msgid "The matrix to convert must have 2 or 3 columns."
 msgstr ""
 
 msgid "is not a valid value for lp, use 1 <= lp"

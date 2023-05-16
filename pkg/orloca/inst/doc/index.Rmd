@@ -1,5 +1,5 @@
 ---
-title: "Index of adea package vignettes"
+title: "Index of orloca package vignettes"
 author: 
  - Manuel Munoz-Marquez^[Universidad de Cádiz, manuel.munoz@uca.es]
 date: "`r Sys.Date()`"

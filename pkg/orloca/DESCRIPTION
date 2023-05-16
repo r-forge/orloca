@@ -6,7 +6,7 @@ Suggests: orloca.es, testthat (>= 3.0.0)
 ByteCompile: true
 VignetteBuilder: knitr
 Title: Operations Research LOCational Analysis Models
-Version: 5.2
+Version: 5.3
 Date: 2023-05-16
 Encoding: UTF-8
 Author: Manuel Munoz-Marquez <manuel.munoz@uca.es>

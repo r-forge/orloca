@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: orloca 2.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-05-15 23:24\n"
-"PO-Revision-Date: 2023-05-15 23:32+0200\n"
+"POT-Creation-Date: 2023-05-16 11:37\n"
+"PO-Revision-Date: 2023-05-16 11:37+0200\n"
 "Last-Translator: Manuel Munoz-Marquez <manuel.munoz@uca.es>\n"
 "Language-Team: Spanish <manuel.munoz@uca.es>\n"
 "Language: es\n"
@@ -18,8 +18,11 @@ msgstr ""
 "X-Poedit-SourceCharset: utf-8\n"
 "X-Generator: Poedit 3.0.1\n"
 
-msgid "The second dimension of matrix must be 2 or 3."
-msgstr "La segunda dimensión de la matriz debe ser 2 ó 3."
+msgid "The data.frame to convert must have 2 or 3 columns."
+msgstr "El data.frame a convertir debe tener 2 o 3 columnas."
+
+msgid "The matrix to convert must have 2 or 3 columns."
+msgstr "La matriz a convertir debe tener 2 o 3 columnas."
 
 msgid "is not a valid value for lp, use 1 <= lp"
 msgstr "no es un valor válido para lp, use 1 <= lp"
@@ -112,6 +115,12 @@ msgstr "Un objeto loca.p con etiqueta:"
 
 msgid "Plot of loca.p"
 msgstr "Gráfico loca.p"
+
+#~ msgid "The number of columns of data frame must be 2 or 3."
+#~ msgstr "El número de columnas del data frame debe ser 2 ó 3."
+
+#~ msgid "The second dimension of matrix must be 2 or 3."
+#~ msgstr "La segunda dimensión de la matriz debe ser 2 ó 3."
 
 #~ msgid "Value for smooth parameter non valid"
 #~ msgstr "Valor del parámetro de suavizado no válido"

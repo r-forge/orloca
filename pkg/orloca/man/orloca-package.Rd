@@ -19,7 +19,7 @@ Package:   orloca
 
 Type:      Package
 
-Version:   5.2
+Version:   5.3
 
 Date:      2023-05-16
 

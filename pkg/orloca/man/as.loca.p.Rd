@@ -13,7 +13,7 @@ as.loca.p(x, ...)
 \item{...}{Other arguments, unused.}
 }
 \value{
-If the arguments have valid values, it returns a new object of the new class.
+It returns a new object of the new class.
 }
 \description{
 Conversions between loca.p class and some others classes
@@ -24,10 +24,8 @@ Methods to convert from and to \code{loca.p} class.
 
 NA's  values are not allowed in any of the arguments.
 
-The \code{matrix} to convert into \code{loca.p} must have at least two columns.
-The first column will be consider as the x coordinates, the second as the y coordinates, and the third (if given) as the values of w.
-
-The \code{data.frame} to convert into \code{loca.p} must have at least an \code{x} column for x coordinates, and an \code{y} column for y coordinates. Optionally, it can have \code{w} column, as the values of weights, \code{w}.
+The \code{matrix} or \code{data.frame} to convert into \code{loca.p} must have at least two columns.
+The first column will be consider as the x coordinates, the second as the y coordinates, and the third (if given) as the values of weights \code{w}.
 }
 \examples{
 # A new unweighted loca.p object
