@@ -1,14 +1,10 @@
-#' Operations Research LOCational Analysis Models
-#' 
-#' Objects and methods to handle and solve the min-sum location problem, also known as Fermat-Weber problem.
-#'
-#' The min-sum location problem search for a point such that the weighted sum of the distances to the demand points are minimized. See "The Fermat-Weber location problem revisited" by Brimberg, Mathematical Programming, 1, pg. 71-76, 1995, \doi{10.1007/BF01592245}.
-#'
-#' General global optimization algorithms are used to solve the problem, along with the adhoc Weiszfeld method, see "Sur le point pour lequel la Somme des distances de n points donnes est minimum", by E. Weiszfeld, Tohoku Mathematical Journal, First Series, 43, pg. 355-386, 1937 or "On the point for which the sum of the distances to n given points is minimum", by E. Weiszfeld and F. Plastria, Annals of Operations Research, 167, pg. 7-41, 2009, \doi{10.1007/s10479-008-0352-z}.
-#'
-#' @aliases orloca-package
 #' @docType package
 #' @name orloca-package
+#' @title Operations Research LOCational Analysis Models
+#' 
+#' @description
+#' Objects and methods to handle and solve the min-sum location problem, also known as Fermat-Weber problem.
+#' 
 #' @details
 #' \preformatted{
 #' 
@@ -16,14 +12,18 @@
 #' 
 #' Type:      Package
 #' 
-#' Version:   5.3
+#' Version:   5.4
 #' 
-#' Date:      2023-05-16
+#' Date:      2023-06-01
 #' 
 #' License:   GPL (>= 3)
 #' }
 #'
-#' The package provides a class (\code{loca.p}) that represents a location problem with a finite set of demand points over the plane.
+#' The min-sum location problem search for a point such that the weighted sum of the distances to the demand points are minimized. See "The Fermat-Weber location problem revisited" by Brimberg, Mathematical Programming, 1, pg. 71-76, 1995, \doi{10.1007/BF01592245}.
+#'
+#' General global optimization algorithms are used to solve the problem, along with the adhoc Weiszfeld method, see "Sur le point pour lequel la Somme des distances de n points donnes est minimum", by E. Weiszfeld, Tohoku Mathematical Journal, First Series, 43, pg. 355-386, 1937 or "On the point for which the sum of the distances to n given points is minimum", by E. Weiszfeld and F. Plastria, Annals of Operations Research, 167, pg. 7-41, 2009, \doi{10.1007/s10479-008-0352-z}.
+#'
+#' The package provides a class \code{loca.p} that represents a location problem with a finite set of demand points on the plane.
 #' Also, it is possible to plot the points and the objective function.
 #' Such objective function is the total weighted distances travelled by all the customers to the service.
 #'
@@ -31,10 +31,10 @@
 #' Non-planar location problems could be handle in future versions of the package.
 #'
 #' 
-#' For a demo, load the package with \code{library(orloca)}, and use \code{demo(orloca)}.
+#' For a demo, load the package with the instruction \code{library(orloca)}, and run the demo executing the instruction \code{demo(orloca)}.
 #'
 #' 
-#' The package is ready for internationalization. The author ask for translated version of the .mo file to include in the package.
+#' The package is ready for internationalization. The author kindly ask for translated version of the .mo file to include in the package.
 #'
 #' @author Manuel Munoz-Marquez <manuel.munoz@@uca.es>
 #' 
@@ -49,9 +49,6 @@
 #' [4] \url{http://knuth.uca.es/orloca/}
 #' 
 #' @keywords package optimize
-#' @seealso
-#' Para la version en espanol, instale el paquete orloca.es y consulte la ayuda sobre \code{\link[orloca.es]{orloca.es-package}}.
-#' (For the spanish version, install the orloca.es package and see the help about \code{\link[orloca.es]{orloca.es-package}}).
 #' @examples
 #' # A new unweighted loca.p object
 #' o <- loca.p(x = c(-1, 1, 1, -1), y = c(-1, -1, 1, 1))
@@ -59,7 +56,7 @@
 #' # Compute the sum of distances to point (3, 4)
 #' distsum(o, 3, 4)
 #' 
-#' # Compute the sum of distances to point (3, 4) using lp norm
+#' # Compute the sum of distances to point (3, 4) using lp norm with p = 2.5
 #' distsum(o, 3, 4, lp=2.5)
 #'
 #' # Solve the optimization problem
@@ -67,7 +64,7 @@
 #' # Contour plot
 #' contour(o)
 #'
-#' # Make a demo of the package
+#' # Run a demo of the package
 #' demo(orloca)
 #'
 #' @import graphics
@@ -90,4 +87,72 @@
 #' @export distsumgra
 #' @export distsummin
 #'
+NULL
+
+#' @rdname paquete-orloca
+#' @name paquete-orloca
+#' @title Modelos de Investigacion Operativa para el Analisis de Localizacion (Operations Research LOCational Analysis Models)
+#'
+#' @description
+#' Objetos y metodos para manejar y resolver el problema de localizacion de suma ponderada minima, tambien conocido como problema de Fermat-Weber.
+#'
+#' \preformatted{
+#' 
+#' Paquete:   orloca
+#' 
+#' Version:   5.4
+#' 
+#' Fecha:      2023-06-01
+#' 
+#' Licencia:   GPL (>= 3)
+#' }
+#'
+#' @details
+#' El problema de localizacion de suma minima busca un punto tal que la suma ponderada de las distancias a los puntos de demanda se minimice.
+#' Vease "The Fermat-Weber location problem revisited" por Brimberg, Mathematical Programming, 1, pag. 71-76, 1995. \doi{10.1007/BF01592245}.
+#'
+#' Se usan algoritmos generales de optimizacion global para resolver el problema, junto con el metodo adhoc Weiszfeld, vease "Sur le point pour lequel la Somme des distance de n points donnes est minimum", por Weiszfeld, Tohoku Mathematical Journal, First Series, 43, pag. 355-386, 1937 o "On the point for which the sum of the distances to n given points is minimum", por E. Weiszfeld y F. Plastria, Annals of Operations Research, 167, pg. 7-41, 2009. \doi{10.1007/s10479-008-0352-z}.
+#'
+#' El paquete proporciona una clase \code{loca.p} que represente un problema de localizacion sobre el plano.
+#' Tambien permite dibujar los puntos junto a la funcion objetivo.
+#' Dicho objetivo es la suma total ponderada de las distancias que viajan los clientes del servicio.
+#'
+#' Versiones no planas del problema podrian incorporarse en futuras versiones del paquete.
+#'
+#' Para una demostracion, cargue el paquete con la instrucción \code{library(orloca)} y ejecute la demostracion con la instruccion \code{demo(orloca)}.
+#' 
+#' El paquete esta preparado para su internacionalizacion.
+#' Las traducciones de los ficheros .mo recibidas seran anadidas en proximas versiones del paquete.
+#'
+#' @author Manuel Munoz-Marquez <manuel.munoz@uca.es>
+#'
+#' Mantenedor: Manuel Munoz-Marquez <manuel.munoz@uca.es>
+#'
+#' @references
+#' [1] Brimberg, J. \emph{The Fermat-Weber location problem revisited}, Mathematical Programming, 1, pg. 71-76, 1995. \doi{10.1007/BF01592245}.
+#'
+#' [2] Love, R. F., Morris, J. G., Wesolowsky, G. O. \emph{Facilities Location: Chapter 2: Introduction to Single-Facility Location}, 1988, North-Holland
+#'
+#' [3] Weiszfeld, E. and Plastria, F. \emph{On the point for which the sum of the distances to n given points is minimum}, Annals of Operations Research, 167, pg. 7-41, 2009, \doi{10.1007/s10479-008-0352-z}.
+#'
+#' [4] \url{http://knuth.uca.es/orloca/}
+#'
+#' @examples
+#' # Un objeto loca.p no ponderado
+#' o <- loca.p(x = c(-1, 1, 1, -1), y = c(-1, -1, 1, 1))
+#'
+#' # Calcula la funcion objetivo en el punto (3, 4)
+#' zsum(o, 3, 4)
+#'
+#' # Calcula la suma de las distancias al punto (3, 4) usando la norma lp con p = 2.5
+#' zsum(o, 3, 4, lp=2.5)
+#'
+#' # Resuelve el problema de localizacion
+#' zsummin(o)
+#'
+#' # Curvas de nivel
+#' contour(o)
+#'
+#' # Ejecuta una demo del paquete
+#' demo(orloca)
 NULL

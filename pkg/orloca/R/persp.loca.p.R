@@ -59,7 +59,7 @@ persp.loca.p <- function(x, lp=numeric(0), xmin=min(x@x), xmax=max(x@x), ymin=mi
             for(j in 1:n)
                 .z[i,j] <- distsumlp(x, .x[i], .y[j], p=lp)
     }
-    else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp", domain = "R-orloca")))
+    else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp")))
     persp(.x, .y, .z, ticktype = ticktype, ...)
     invisible(1)
 }

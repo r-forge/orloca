@@ -42,7 +42,7 @@ setMethod("distsumgra", "loca.p", function(o, x=0, y=0, lp=numeric(0), partial=F
    {
      if (length(lp) == 0) return(distsuml2gra(o=o, x=x, y=y, partial=partial))
      else if (lp >= 1) return(distsumlpgra(o=o, x=x, y=y, p=lp, partial=partial))
-     else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp", domain = "R-orloca")))
+     else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp")))
    }
 )
 

@@ -28,7 +28,7 @@
 #' @param \ldots Other graphical options.
 #' @return The function plots the required graphics.
 #' @export
-plot.loca.p <- function(x, xlab="", ylab="", main=paste(gettext("Plot of loca.p", domain = "R-orloca"), ifelse(x@label == "", "", paste0(": \"", x@label, "\""))), img=NULL, xlim=c(min(xleft, min(x@x)), max(xright, max(x@x))), ylim=c(min(ybottom, min(x@y)), max(ytop, max(x@y))), xleft=min(x@x), ybottom=min(x@y), xright=max(x@x), ytop=max(x@y), ...)
+plot.loca.p <- function(x, xlab="", ylab="", main=paste(gettext("Plot of loca.p"), ifelse(x@label == "", "", paste0(": \"", x@label, "\""))), img=NULL, xlim=c(min(xleft, min(x@x)), max(xright, max(x@x))), ylim=c(min(ybottom, min(x@y)), max(ytop, max(x@y))), xleft=min(x@x), ybottom=min(x@y), xright=max(x@x), ytop=max(x@y), ...)
 {
     ## Compute graphical limits to avoid degenerated cases and wrong argument values
     .xmin = min(xlim[1], xlim[2])
@@ -49,7 +49,7 @@ plot.loca.p <- function(x, xlab="", ylab="", main=paste(gettext("Plot of loca.p"
         if (is.raster(.img <- img) || is.raster(.img <- as.raster(img))) {
             rasterImage(.img, xleft, ybottom, xright, ytop)
         }
-        else warning(gettext("The given img object is not a raster image and cannot be coerce to it.", domain = "R-orloca"))
+        else warning(gettext("The given img object is not a raster image and cannot be coerce to it."))
     }
     points(x@x, x@y)
 }

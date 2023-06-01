@@ -45,7 +45,7 @@ distsuml2mingradient.loca.p <- function (o, x = 0, y = 0, max.iter = 100, eps = 
     u<-c(x,y)
     z <- distsum(o, u[1], u[2])
     for (i in 0:max.iter) {
-        if (verbose) cat(paste(gettext("Iter", domain = "R-orloca"), ".", i, ": (", u[1], ",", u[2], ") ", z, "\n", sep = ""))
+        if (verbose) cat(paste(gettext("Iter"), ".", i, ": (", u[1], ",", u[2], ") ", z, "\n", sep = ""))
         g<-distsumgra(o, u[1], u[2])
         mg <- sum(g^2)
         ## Check stop rule
@@ -55,11 +55,11 @@ distsuml2mingradient.loca.p <- function (o, x = 0, y = 0, max.iter = 100, eps = 
             mg <- sum(g^2)
             ii <- which.min((o@x-u[1])^2+(o@y-u[2])^2)
             if (mg < sum(o@w[ii]^2)) {
-                if(verbose) cat(gettext("Optimality condition reached at demand point.", domain = "R-orloca"));
+                if(verbose) cat(gettext("Optimality condition reached at demand point."));
                 break
             }
         } else if (mg < eps2) {
-            if(verbose) cat(gettext("Optimality condition reached.", domain = "R-orloca"));
+            if(verbose) cat(gettext("Optimality condition reached."));
             break;
         }
         nu <- u - lambda*g
@@ -79,7 +79,7 @@ distsuml2mingradient.loca.p <- function (o, x = 0, y = 0, max.iter = 100, eps = 
 distsuml2minWeiszfeld.loca.p <- function (o, x = 0, y = 0, max.iter = 100, eps = 1.e-3, verbose = FALSE, csmooth = .9) {
     ## Check smooth value
     if (!identical(csmooth >= 0 && csmooth < 1, TRUE)) {
-        warning(paste(gettext("Value for smooth parameter non valid:", domain = "R-orloca"), smooth, gettext("Reseting to its default value.", domain = "R-orloca")))
+        warning(paste(gettext("Value for smooth parameter non valid:"), smooth, gettext("Reseting to its default value.")))
         csmooth <- .5
     }
     eps2 <- eps^2
@@ -90,7 +90,7 @@ distsuml2minWeiszfeld.loca.p <- function (o, x = 0, y = 0, max.iter = 100, eps =
     i.s = round(max.iter*.5)
     for (j in 1:2) {
         for (i in i.i:i.s) {
-            if (verbose) cat(paste(gettext("Iter", domain = "R-orloca"), ". ", i, ": (", u[1], ",", u[2], ") ", distsum(o, u[1], u[2]), "\n", sep = ""))
+            if (verbose) cat(paste(gettext("Iter"), ". ", i, ": (", u[1], ",", u[2], ") ", distsum(o, u[1], u[2]), "\n", sep = ""))
             ## Compute the distances to demand points
             n <- sqrt((u[1]-o@x)^2+(u[2]-o@y)^2)
             ## Check for demand point proximities
@@ -104,11 +104,11 @@ distsuml2minWeiszfeld.loca.p <- function (o, x = 0, y = 0, max.iter = 100, eps =
             if (!all(ii)) {
                 ## A demand point stop rule
                 if (mg < sum(o@w[!ii]^2) || mg < eps2) {
-                    if(verbose) cat(gettext("Optimality condition reached at demand point.", domain = "R-orloca"));
+                    if(verbose) cat(gettext("Optimality condition reached at demand point."));
                     break
                 }
             } else if (mg <eps2) { ## Generic stop rule
-                if(verbose) cat(gettext("Optimality condition reached.", domain = "R-orloca"));
+                if(verbose) cat(gettext("Optimality condition reached."));
                 break
             }
             s <- sum(n[ii])
@@ -120,7 +120,7 @@ distsuml2minWeiszfeld.loca.p <- function (o, x = 0, y = 0, max.iter = 100, eps =
         if (i != i.s) break
         ## Changing to smooth version
         .smooth = csmooth
-        if (j == 1) warning(gettext("The algorithm seems converges very slowly. Trying now with the smooth version.", domain = "R-orloca"))
+        if (j == 1) warning(gettext("The algorithm seems converges very slowly. Trying now with the smooth version."))
         i.i = i.s
         i.s = max.iter
     }

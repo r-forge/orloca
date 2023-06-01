@@ -52,7 +52,7 @@ function (o, x=0, y=0, lp=numeric(0), max.iter=100000, eps=1.e-3, verbose=FALSE,
    {
      if (length(lp) == 0) return(distsuml2min(o=o, x=x, y=y, max.iter=max.iter, eps=eps, verbose=verbose, algorithm=algorithm, ...))
      else if (lp >= 1) return(distsumlpmin(o=o, x=x, y=y, p=lp, max.iter=max.iter, eps=eps, verbose=verbose, algorithm=algorithm, ...))
-     else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp", domain = "R-orloca")))
+     else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp")))
    }
 )
 

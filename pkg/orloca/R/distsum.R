@@ -41,7 +41,7 @@ setMethod("distsum", "loca.p", function(o, x=0, y=0, lp=numeric(0))
    {
      if (length(lp) == 0) return(distsuml2(o=o, x=x, y=y))
      else if (lp >= 1) return(distsumlp(o=o, x=x, y=y, p=lp))
-     else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp", domain = "R-orloca")))
+     else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp")))
    }
 )
 

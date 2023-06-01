@@ -63,7 +63,7 @@ contour.loca.p <- function(x, lp=numeric(0), xmin=min(min(x@x), xleft), xmax=max
             for(j in 1:n)
                 .z[i,j] <- distsumlp(x, .x[i], .y[j], p=lp)
     }
-    else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp", domain = "R-orloca")))
+    else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp")))
     ## Plot it
     contour(.x, .y, .z, ...) 
     if (!is.null(img)) {
@@ -71,7 +71,7 @@ contour.loca.p <- function(x, lp=numeric(0), xmin=min(min(x@x), xleft), xmax=max
             rasterImage(.img, xleft, ybottom, xright, ytop)
             contour(.x, .y, .z, add=TRUE, ...) 
         }
-        else warning(gettext("The given img object is not a raster image and cannot be coerce to it.", domain = "R-orloca"))
+        else warning(gettext("The given img object is not a raster image and cannot be coerce to it."))
     }
     invisible(1)
 }
@@ -94,7 +94,7 @@ persp.loca.p <- function(x, lp=numeric(0), xmin=min(x@x), xmax=max(x@x), ymin=mi
             for(j in 1:n)
                 .z[i,j] <- distsumlp(x, .x[i], .y[j], p=lp)
     }
-    else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp", domain = "R-orloca")))
+    else stop(paste(lp, gettext("is not a valid value for lp, use 1 <= lp")))
     persp(.x, .y, .z, ...)
     invisible(1)
 }
