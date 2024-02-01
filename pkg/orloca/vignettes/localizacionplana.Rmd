@@ -21,7 +21,7 @@ library('orloca')
 
 # Introducción
 
-En un problema de localización se busca encontrar la ubicación óptima de un servicio, o un conjunto de ellos, de forma que la calidad que dicho servicio presta a un conjunto de puntos de demanda sea, según cierta medida, óptimo. 
+En un problema de localización se busca encontrar la ubicación óptima de un servicio, o un conjunto de ellos, de forma que la calidad que dicho servicio presta a un conjunto de puntos de demanda sea, según cierta medida, óptima. 
 Algunos ejemplos de problemas de localización son:
 
 * Encontrar la ubicación óptima del almacen central de una red de distribución de mercancías para que se minimice el costo total de transporte
@@ -95,7 +95,7 @@ as.data.frame(p1)
 ```
 
 En las conversiones, el slot `label` del objeto `loca.p` se almacena como un atributo del objeto `data.frame`. 
-La etiqueta se puede leer y modificar accediendo a ellos:
+La etiqueta se puede leer y modificar:
 ```{r}
 p1@label
 dp1 <- as.data.frame(p1)
@@ -124,13 +124,13 @@ rloca.p(5, xmin = -1, xmax = 1, ymin = -5, ymax = 5, label = "Rectángulo")
 Los puntos generados por la función `rloca.p` se pueden generar en grupos repartidos espacialmente. 
 El argumento `groups` permite especificar el número de grupos mediante un número o el número de puntos en cada grupo a través de un vector. 
 En este segundo caso, el valor dado al argumento `n` se ignora. 
-Para generar aleatoriamente un conjunto de demanda con tres grupos iguales:
+Para generar aleatoriamente un conjunto de demanda con tres grupos de igual tamaño:
 ```{r}
-rloca.p(9, groups = 3, label = "Tres grupos iguales")
+rloca.p(9, groups = 3, label = "Tres tamaños iguales")
 ```
-para tres grupos desiguales:
+para tres grupos de tamaños desiguales:
 ```{r}
-rloca.p(groups = c(2, 2, 5), label = "Tres grupos desiguales")
+rloca.p(groups = c(2, 2, 5), label = "Tres tamaños desiguales")
 ```
 
 Para generar los datos en grupos se genera en primer lugar un desplazamiento del centro de cada grupo y luego se generan los puntos sumando a cada punto el desplazamiento que corresponda a su grupo.
@@ -138,7 +138,7 @@ Por tal motivo, `groups = 1` no es equivalente a no especificar dicho parámetro
 El desplazamiento de los centros se puede especificar mediante los argumentos `xgmin`, `xgmax`, `ygmin` e `ygmax`. 
 Para ilustrar mejor el funcionamiento de la función se puede pintar el resultado:
 ```{r}
-rl <- rloca.p(60, groups = 3, xmin = -10, xmax = 10, ymin = -10, ymax = 10, xgmin = -1, xgmax = 1, ygmin = -1, ygmax = 1, label = "Tres grupos")
+rl <- rloca.p(60, groups = 3, xmin = -1, xmax = 1, ymin = -1, ymax = 1, xgmin = -10, xgmax = 10, ygmin = -10, ygmax = 10, label = "Tres grupos")
 plot(rl)
 ```
 
@@ -158,7 +158,8 @@ Así mismo, se puede evaluar el gradiente de dicha función y se puede resolver 
 
 ## Evaluación
 
-La función distancia media ponderada se denomina en el paquete `distsum`, dado un punto, por ejemplo: $(3, 1)$ se puede evaluar la distancia media ponderada a un objeto `loca.p`:
+La función distancia media ponderada se denomina en el paquete `distsum`.
+Dado un punto, por ejemplo: $(3, 1)$ se puede evaluar la distancia media ponderada a un objeto `loca.p`:
 ```{r}
 pt3 <- loca.p(x = c(0, 4, 2), y = c(0, 0, 2), label = "Tres puntos")
 distsum(o = pt3, x = 3, y = 1)

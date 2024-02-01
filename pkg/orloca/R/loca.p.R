@@ -11,8 +11,10 @@
 #' An alternative form is \code{new("loca.p", x, y, w = numeric(0), label = "")}.
 #'
 #' The lengths of \code{x} and \code{y} vector must be equals.
-#' The length of \code{w} must be equal to the previous ones or must be 0.
+#' The length of \code{w} must be equal to the previous ones or must be 0, or should be omitted.
 #' NA's values are not allowed at any of the arguments.
+#' 
+#' \code{summary(x)} returns a summary of the \code{x} \code{loca.p} object and \code{print(x)} prints the \code{x} \code{loca.p} object in table format.
 #'
 #' @keywords classes optimize
 #'
@@ -21,7 +23,6 @@
 #' @param w is a vector of weights of the demand points. If w is omitted then all weights are considered as 1.
 #' @param label If given, it is the label of the new object.
 #' @return If the arguments have valid values, it returns a new object of class \code{loca.p}, else it returns an error.
-#' \code{summary(x)} returns a summary of the \code{x} \code{loca.p} object and \code{print(x)} prints the \code{x} \code{loca.p} object in table format.
 #' @examples
 #' # A new unweighted loca.p object
 #' loca <- loca.p(x = c(-1, 1, 1, -1), y = c(-1, -1, 1, 1))

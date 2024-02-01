@@ -14,7 +14,7 @@
 #' Since \eqn{l_2} norm is the Euclidean norm, when \eqn{p=2} \code{distsumlpmin} are equal to \code{distsummin}.
 #' But the computations involved are greater for the first form.
 #' 
-#' max.iter for SANN algorithm is the number of evaluation of objective function, so this methos usually requires large values of max.iter to reach optimal value
+#' max.iter for SANN algorithm is the number of evaluation of objective function, so this method usually requires large values of max.iter to reach optimal value
 #' @param o An object of loca.p class.
 #' @param x The x coordinate of the starting point. It's default value is 0.
 #' @param y The y coordinate of the starting point. It's default value is 0.

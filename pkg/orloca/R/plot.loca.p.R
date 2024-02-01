@@ -2,7 +2,7 @@
 #'
 #' This method provides a graphical representations of an object of class \code{loca.p}.
 #'
-#' The function plots the demand points with automatic limits evaluation.
+#' The function plots demand points by evaluating limits automatically.
 #'
 #' @name plot
 #' @docType methods

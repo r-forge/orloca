@@ -54,7 +54,7 @@ The function plots the required graphics.
 This method provides a graphical representations of an object of class \code{loca.p}.
 }
 \details{
-The function plots the demand points with automatic limits evaluation.
+The function plots demand points by evaluating limits automatically.
 }
 \examples{
 # A new unweighted loca.p object

@@ -2,13 +2,14 @@
 #'
 #' \code{distsum} and \code{distsumgra} functions for the Euclidean norm (\eqn{l_2}). Mainly for internal use.
 #'
+#' If \eqn{(x,y)} is a demand point \code{partial=T} means ignore such point to compute the gradient. This option is mainly for internal use.
+#'
 #' @name distsuml2
 #' @aliases distsuml2 distsuml2,loca.p-method distsuml2gra distsuml2gra,loca.p-method
 #' @keywords internal classes optimize
 #' @param o An object of \code{loca.p} class.
 #' @param x The x coordinate of the point to be evaluated.
 #' @param y The y coordinate of the point to be evaluated.
-#' @param partial If (x,y) is a demand point \code{partial=T} means ignore such point to compute the gradient. This option is mainly for internal use.
 #' @return \code{distsuml2} returns the objective function of the min-sum location problem, \eqn{\sum_{a_i \in o} w_i d(a_i, (x,y))}, where \eqn{d(a_i, (x,y))} gives the euclidean distances between \eqn{a_i} and the point \eqn{(x,y)}.  \code{distsumgra} returns the gradient vector of the function \code{distsum}.
 #' @seealso See also \code{\link{orloca-package}}, \code{\link{distsum}}, \code{\link{distsumgra}} and \code{\link{distsummin}}.
 #' 

@@ -49,7 +49,7 @@ If \eqn{p < 1} thus \eqn{l_p} is not a norm, so, only \eqn{p \ge 1} are valid va
 Since \eqn{l_2} norm is the Euclidean norm, when \eqn{p=2} \code{distsumlpmin} are equal to \code{distsummin}.
 But the computations involved are greater for the first form.
 
-max.iter for SANN algorithm is the number of evaluation of objective function, so this methos usually requires large values of max.iter to reach optimal value
+max.iter for SANN algorithm is the number of evaluation of objective function, so this method usually requires large values of max.iter to reach optimal value
 
 The function zsummin is deprecated and will be removed from new versions of the package.
 }

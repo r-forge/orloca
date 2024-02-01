@@ -48,13 +48,13 @@ rloca.p(5)
 rloca.p(5, xmin = -1, xmax = 1, ymin = -5, ymax = 5, label = "Rectángulo")
 
 ## -----------------------------------------------------------------------------
-rloca.p(9, groups = 3, label = "Tres grupos iguales")
+rloca.p(9, groups = 3, label = "Tres tamaños iguales")
 
 ## -----------------------------------------------------------------------------
-rloca.p(groups = c(2, 2, 5), label = "Tres grupos desiguales")
+rloca.p(groups = c(2, 2, 5), label = "Tres tamaños desiguales")
 
 ## -----------------------------------------------------------------------------
-rl <- rloca.p(60, groups = 3, xmin = -10, xmax = 10, ymin = -10, ymax = 10, xgmin = -1, xgmax = 1, ygmin = -1, ygmax = 1, label = "Tres grupos")
+rl <- rloca.p(60, groups = 3, xmin = -1, xmax = 1, ymin = -1, ymax = 1, xgmin = -10, xgmax = 10, ygmin = -10, ygmax = 10, label = "Tres grupos")
 plot(rl)
 
 ## -----------------------------------------------------------------------------

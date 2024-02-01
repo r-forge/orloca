@@ -51,7 +51,7 @@
 \code{contour.loca.p} plots a contour plot of min-sum function (\code{distsum}).
 }
 \description{
-\code{contour} provides a graphical representations of min-sum function (\code{distsum}).
+\code{contour} provides a graphical representations of min-sum objective function, which is the weighted sum of the distances to demand points (\code{distsum}).
 }
 \details{
 If \eqn{p<1} then \eqn{l_p} is not a norm, so only \eqn{p>=1} are valid values.

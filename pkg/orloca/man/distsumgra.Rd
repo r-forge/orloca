@@ -20,10 +20,10 @@ distsumgra(o, x = 0, y = 0, lp = numeric(0), partial = F)
 \item{partial}{If (x,y) is a demand point \code{partial=T} means ignore such point to compute the gradient. This option is mainly for internal use.}
 }
 \value{
-\code{distsumgra} returns the gradient vector of the function of the min-sum location problem, \eqn{\sum_{a_i \in o} w_i d(a_i, (x,y))}, where \eqn{d(a_i, (x,y))} gives the euclidean or the \eqn{l_p} distances between \eqn{a_i} and the point \eqn{(x,y)}.
+\code{distsumgra} returns the gradient vector of the objective function of the min-sum location problem, \eqn{\sum_{a_i \in o} w_i d(a_i, (x,y))}, where \eqn{d(a_i, (x,y))} gives the euclidean or the \eqn{l_p} distances between \eqn{a_i} and the point \eqn{(x,y)}.
 }
 \description{
-The gradient function for the min-sum location problem.
+The gradient of the objective function for the min-sum location problem.
 }
 \details{
 The function zsumgra is deprecated and will be removed from new versions of the package.

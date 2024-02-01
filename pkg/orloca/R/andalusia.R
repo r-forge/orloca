@@ -19,7 +19,7 @@
 #' \code{city}: If yes the point is a city in other case is a limit.
 #'
 #' @section Source:
-#' The data are taken from wikipedia.
+#' Data are taken from wikipedia.
 #' 
 NULL
 

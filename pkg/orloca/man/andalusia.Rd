@@ -23,7 +23,7 @@ data('andalusia')
 
 \section{Source}{
 
-The data are taken from wikipedia.
+Data are taken from wikipedia.
 }
 
 \seealso{

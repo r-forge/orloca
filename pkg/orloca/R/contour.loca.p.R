@@ -1,6 +1,6 @@
 #' Plots of the min-sum objective function
 #'
-#' \code{contour} provides a graphical representations of min-sum function (\code{distsum}).
+#' \code{contour} provides a graphical representations of min-sum objective function, which is the weighted sum of the distances to demand points (\code{distsum}).
 #'
 #' @name contour.loca.p
 #'

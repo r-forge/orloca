@@ -1,6 +1,6 @@
 #' Computes distsum function
 #'
-#' The objective function and the gradient function for the min-sum location problem.
+#' The objective function and the gradient of the objective function for the min-sum location problem.
 #'
 #' @name distsum
 #' @aliases distsum distsum,loca.p-method

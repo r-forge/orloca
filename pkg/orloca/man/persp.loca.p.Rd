@@ -39,7 +39,7 @@
 A plot a 3D plot or min-sum function.
 }
 \description{
-\code{persp} provides a graphical representations of min-sum function (\code{distsum}).
+\code{persp} provides a graphical representations of objetive function of the min-sum problem, which is the total weighte distance to the demand points (\code{distsum}).
 }
 \details{
 If \eqn{p<1} then \eqn{l_p} is not a norm, so only \eqn{p>=1} are valid values.

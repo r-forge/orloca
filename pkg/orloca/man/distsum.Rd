@@ -21,7 +21,7 @@ distsum(o, x = 0, y = 0, lp = numeric(0))
 \code{distsum} returns the objective function of the min-sum location problem, \eqn{\sum_{a_i \in o} w_i d(a_i, (x,y))}, where \eqn{d(a_i, (x,y))} gives the euclidean or the \eqn{l_p} distances between \eqn{a_i} and the point \eqn{(x,y)}.
 }
 \description{
-The objective function and the gradient function for the min-sum location problem.
+The objective function and the gradient of the objective function for the min-sum location problem.
 }
 \details{
 The function zsum is deprecated and will be removed from new versions of the package.

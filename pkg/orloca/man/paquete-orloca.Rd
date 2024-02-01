@@ -10,9 +10,9 @@ Objetos y metodos para manejar y resolver el problema de localizacion de suma po
 
 Paquete:   orloca
 
-Version:   5.4
+Version:   5.5
 
-Fecha:      2023-06-01
+Fecha:      2023-09-19
 
 Licencia:   GPL (>= 3)
 }
@@ -23,9 +23,9 @@ Vease "The Fermat-Weber location problem revisited" por Brimberg, Mathematical P
 
 Se usan algoritmos generales de optimizacion global para resolver el problema, junto con el metodo adhoc Weiszfeld, vease "Sur le point pour lequel la Somme des distance de n points donnes est minimum", por Weiszfeld, Tohoku Mathematical Journal, First Series, 43, pag. 355-386, 1937 o "On the point for which the sum of the distances to n given points is minimum", por E. Weiszfeld y F. Plastria, Annals of Operations Research, 167, pg. 7-41, 2009. \doi{10.1007/s10479-008-0352-z}.
 
-El paquete proporciona una clase \code{loca.p} que represente un problema de localizacion sobre el plano.
+El paquete proporciona una clase \code{loca.p} que representa un problema de localizacion sobre el plano.
 Tambien permite dibujar los puntos junto a la funcion objetivo.
-Dicho objetivo es la suma total ponderada de las distancias que viajan los clientes del servicio.
+Dicho objetivo es la suma ponderada de las distancias que viajan los clientes del servicio.
 
 Versiones no planas del problema podrian incorporarse en futuras versiones del paquete.
 
@@ -39,12 +39,15 @@ Las traducciones de los ficheros .mo recibidas seran anadidas en proximas versio
 o <- loca.p(x = c(-1, 1, 1, -1), y = c(-1, -1, 1, 1))
 
 # Calcula la funcion objetivo en el punto (3, 4)
+# [1] 20.39384
 zsum(o, 3, 4)
 
 # Calcula la suma de las distancias al punto (3, 4) usando la norma lp con p = 2.5
-zsum(o, 3, 4, lp=2.5)
+# [1] 19.27258
+zsum(o, 3, 4, lp = 2.5)
 
 # Resuelve el problema de localizacion
+# [1] 0 0
 zsummin(o)
 
 # Curvas de nivel

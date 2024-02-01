@@ -17,13 +17,11 @@ distsumlp(o, x = 0, y = 0, p = 2)
 \item{y}{The y coordinate of the point to be evaluated.}
 
 \item{p}{The \eqn{l_p} norm to use.}
-
-\item{partial}{If (x,y) is a demand point \code{partial=T} means ignore such point to compute the gradient. This option is mainly for internal use.}
 }
 \value{
 \code{distsumlp} returns the objective function of the min-sum location problem with \eqn{l_p} norm, \eqn{\sum_{a_i \in o} w_i d(a_i, (x,y))}, where \eqn{d(a_i, (x,y))} gives the distances between \eqn{a_i} and the point \eqn{(x,y)} using \eqn{l_p} norm.
 
-\code{distsumlpgra} returns the gradient vector of the function \code{distsumlp}.
+\code{distsumlpgra} returns the gradient vector of the function \code{distsumlp}. If \eqn{(x,y)} is a demand point \code{partial=T} means ignore such point to compute the gradient. This option is mainly for internal use.
 }
 \description{
 distsum and distsumgra functions with \eqn{l_p} norm. Mainly for internal use.

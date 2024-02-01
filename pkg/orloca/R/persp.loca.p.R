@@ -1,6 +1,6 @@
 #' Plots of the min-sum objective function
 #'
-#' \code{persp} provides a graphical representations of min-sum function (\code{distsum}).
+#' \code{persp} provides a graphical representations of objetive function of the min-sum problem, which is the total weighte distance to the demand points (\code{distsum}).
 #'
 #' @name persp.loca.p
 #'

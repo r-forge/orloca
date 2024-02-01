@@ -2,31 +2,31 @@
 % Please edit documentation in R/orloca-package.R
 \docType{package}
 \name{orloca-package}
+\alias{orloca}
 \alias{orloca-package}
 \title{Operations Research LOCational Analysis Models}
 \description{
 Objects and methods to handle and solve the min-sum location problem, also known as Fermat-Weber problem.
 }
 \details{
-The min-sum location problem search for a point such that the weighted sum of the distances to the demand points are minimized. See "The Fermat-Weber location problem revisited" by Brimberg, Mathematical Programming, 1, pg. 71-76, 1995, \doi{10.1007/BF01592245}.
-
-General global optimization algorithms are used to solve the problem, along with the adhoc Weiszfeld method, see "Sur le point pour lequel la Somme des distances de n points donnes est minimum", by E. Weiszfeld, Tohoku Mathematical Journal, First Series, 43, pg. 355-386, 1937 or "On the point for which the sum of the distances to n given points is minimum", by E. Weiszfeld and F. Plastria, Annals of Operations Research, 167, pg. 7-41, 2009, \doi{10.1007/s10479-008-0352-z}.
-
-
 \preformatted{
 
 Package:   orloca
 
 Type:      Package
 
-Version:   5.3
+Version:   5.6
 
-Date:      2023-05-16
+Date:      2024-01-31
 
 License:   GPL (>= 3)
 }
 
-The package provides a class (\code{loca.p}) that represents a location problem with a finite set of demand points over the plane.
+The min-sum location problem search for a point such that the weighted sum of the distances to the demand points are minimized. See "The Fermat-Weber location problem revisited" by Brimberg, Mathematical Programming, 1, pg. 71-76, 1995, \doi{10.1007/BF01592245}.
+
+General global optimization algorithms are used to solve the problem, along with the adhoc Weiszfeld method, see "Sur le point pour lequel la Somme des distances de n points donnes est minimum", by E. Weiszfeld, Tohoku Mathematical Journal, First Series, 43, pg. 355-386, 1937 or "On the point for which the sum of the distances to n given points is minimum", by E. Weiszfeld and F. Plastria, Annals of Operations Research, 167, pg. 7-41, 2009, \doi{10.1007/s10479-008-0352-z}.
+
+The package provides a class \code{loca.p} that represents a location problem with a finite set of demand points on the plane.
 Also, it is possible to plot the points and the objective function.
 Such objective function is the total weighted distances travelled by all the customers to the service.
 
@@ -34,27 +34,31 @@ Such objective function is the total weighted distances travelled by all the cus
 Non-planar location problems could be handle in future versions of the package.
 
 
-For a demo, load the package with \code{library(orloca)}, and use \code{demo(orloca)}.
+For a demo, load the package with the instruction \code{library(orloca)}, and run the demo executing the instruction \code{demo(orloca)}.
 
 
-The package is ready for internationalization. The author ask for translated version of the .mo file to include in the package.
+The package is ready for internationalization. The author kindly ask for translated version of the .mo file to include in the package.
 }
 \examples{
 # A new unweighted loca.p object
 o <- loca.p(x = c(-1, 1, 1, -1), y = c(-1, -1, 1, 1))
 
 # Compute the sum of distances to point (3, 4)
+# [1] 20.39384
 distsum(o, 3, 4)
 
-# Compute the sum of distances to point (3, 4) using lp norm
-distsum(o, 3, 4, lp=2.5)
+# Compute the sum of distances to point (3, 4) using lp norm with p = 2.5
+# [1] 19.27258
+distsum(o, 3, 4, lp = 2.5)
 
 # Solve the optimization problem
+# [1] 0 0
 distsummin(o)
+
 # Contour plot
 contour(o)
 
-# Make a demo of the package
+# Run a demo of the package
 demo(orloca)
 
 }
@@ -68,8 +72,11 @@ demo(orloca)
 [4] \url{http://knuth.uca.es/orloca/}
 }
 \seealso{
-Para la version en espanol, instale el paquete orloca.es y consulte la ayuda sobre \code{\link[orloca.es]{orloca.es-package}}.
-(For the spanish version, install the orloca.es package and see the help about \code{\link[orloca.es]{orloca.es-package}}).
+Useful links:
+\itemize{
+  \item \url{http://knuth.uca.es/orloca/}
+}
+
 }
 \author{
 Manuel Munoz-Marquez <manuel.munoz@uca.es>
